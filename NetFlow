@@ -1,5 +1,6 @@
 NTOPNG -    Netflow receiver analyzer
 https://www.ntop.org/products/traffic-analysis/ntop/
+https://www.ntop.org/guides/ntopng/case_study/using_with_nprobe.html
 https://hub.docker.com/r/ntop/ntopng
 https://thwack.solarwinds.com/product-forums/netflow-traffic-analyzer-nta/f/forum/39229/cisco-9300-switches-and-netflow
 https://www.youtube.com/watch?v=dzRjVoqkFM4
