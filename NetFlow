@@ -5,3 +5,6 @@ https://hub.docker.com/r/ntop/ntopnghttps://www.ntop.org/nprobe/best-practices-f
 https://thwack.solarwinds.com/product-forums/netflow-traffic-analyzer-nta/f/forum/39229/cisco-9300-switches-and-netflow
 https://www.youtube.com/watch?v=dzRjVoqkFM4
 
+
+You may want permanent storage if you go with Docker:
+https://docs.docker.com/storage/volumes/
