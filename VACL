@@ -1,0 +1,15 @@
+mac access-list extended allowany
+permit any any
+
+mac access-list extended Win7drop
+permit host d45d.dfaa.aaaa any
+permit any host d45d.dfaa.aaaa
+
+vlan access-map Win7drop 100
+match mac address Win7drop
+action drop
+vlan access-map Win7drop 110
+match mac address allowany
+action forward
+
+vlan filter Win7drop vlan-list 1
