@@ -7,6 +7,9 @@ Do you count layer 2 headers? Your just counting math and bits so I would assume
 
 https://learningnetwork.cisco.com/s/question/0D53i00000Ksv0MCAR/token-bucket-cir-theory
 You can't actually change line speed you can alter the time sample and the quantity to max line speed if you wish. 
+So, if you wanted to but the bandwidth in half. You would use 8 TCs and they would fill and have airtime in second half of the 128ms. 
+Given the scenario explained below from Scott about 64k on 128k line
+(TC1 fill 1/2 data, second half air time), (TC2 fill 1/2 data, second half air time), (TCN fill 1/2 data, second half air time), (TC8 fill 1/2 data, second half air time)
 TC = time Cycle
 BC = Burst Cycle
 Be = Excess Burst per Tc
