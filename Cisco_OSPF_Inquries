@@ -1,8 +1,9 @@
 1. Find all OSPF router IDs within OSPF domain.
-
+2. Find status of all OSPF interfaces on a router. ie  Addy Mask, Cost, State(DR,P2p), NBrs, Area, PID
 
 
 
 
 
 1. show ip ospf database
+2. show ip ospf int br
