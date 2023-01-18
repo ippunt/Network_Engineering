@@ -1,1 +1,38 @@
 https://youtu.be/Ttd4y3R6J24
+https://packetlife.net/media/library/19/QoS.pdf
+
+
+
+
+https://learningnetwork.cisco.com/s/question/0D53i00000Ksv0MCAR/token-bucket-cir-theory
+Incase this one disappears I want to have it to read later:
+
+swmorris
+
+Edited by Admin February 16, 2020 at 2:32 AM
+Math dude....  It's all about the math.
+Whoever created the token bucket theories was on SERIOUS *****.     The philsophical concept is you need "permission" to go, and the ephemeral tokens represented permission slips.
+They don't really exist though.  They're in your head.  Or induced in your head from the bad trip you are on!
+Let's take some simple things...   You have a physical line speed of 128K.  That's what you bought.  How much data can you send down that pipe?  (Not the kind you smoke)
+128,000 bits per second.  If you try to send more, you will get output drops.  If you need to send more, you'll have to go to accounting.  They will laugh at you.
+So we need to relegate and prioritize and shape traffic now...  
+In order to think about these things we need a time interval to work the math with.  If our Tc (Time per Cycle) was 1 second, then our burst per cycle (Bc) would be 128000 bits.
+but that would be silly.  So we'll look at smaller intervals.
+The default Tc is 125ms  (1/8 of a second).   So now, still looking at our line speed.  
+What is the MAXIMUM number of bits per Tc we can send without having output drops?   (hint:  divide by 8)
+Yup.  16,000 bits per Tc.  16,000 * 8 Tc's = 128,000 bits per second!  Yay.   So that stuff we just did is the LAW.  You can't break it, or you'll drop stuff.  You can't increase it or you have to talk to Accounting.
+
+---------------
+Now that we know the law, it's time to talk about CIR....  CIR is a theorhetical target.  In other words, what do you WANT to do?  
+Now, some people will come up with cool formulas and other fancy stuff, but in the end, you make it up.  
+See if the result is what you want, and if not, tweak it.  After a while, of course, you'll get better at your first guess.  It's still a guess.  We just call that 'experience'.  
+So, for 'x' type of traffic, let's say I WANT to send data at 64000 bits per second.  So my CIR = 64K (64000).  N
+ow, how many bits do I have to send per Tc in order to achieve that (again, divide by 8).  So Bc = 8000 bits per Tc.
+
+Now, the hard part.  Remember the 16,000 total bits/Tc available?   I just allocated 8000 of them.  I still have 8000 left.  I can set those as Be (excess burst per Tc) or I can leave it alone. 
+ Setting Be to 8000 would be called "burst to port speed".   but let's not do that
+Let's say I have another type of traffic...  CIR = 32000 bps.  What's the Bc?   Yup, 4000 bits per Tc.  So now between two CIRs I have allocated 12,000 of my 16,000 total bits per Tc. 
+I can balance Be between the two, or do 4k and 0k, 3 and 1, 1 and 3 or whatever I feel like....
+But when I add everything up, we can't break the law!  Or bad things may happen!
+But it's all about the math. 
+HTH,
