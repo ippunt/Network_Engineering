@@ -1,0 +1,18 @@
+Basics of OSPF:
+
+set protocols ospf area 0.0.0.0 interface ge-0/0/0.0
+set protocols ospf area 0.0.0.0 interface ge-0/0/1.0
+set protocols ospf area 0.0.0.0 interface lo0.0
+set protocols ospf area 0.0.0.0 interface lo0.16385
+set protocols ospf area 0.0.0.0 interface lo0.16386
+
+router ospf 1
+ router-id 1.1.1.1
+ area 0 authentication message-digest
+ redistribute static metric 11111 metric-type 1 subnets
+ redistribute eigrp 10 metric 30 subnets
+ passive-interface default
+ no passive-interface GigabitEthernet1/0/1
+ no passive-interface GigabitEthernet1/0/2
+ network 10.1.1.1 0.0.0.0 area 0
+ network 10.2.2.2 0.0.0.0 area 0
