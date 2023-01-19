@@ -1,0 +1,7 @@
+interface FastEthernet0/1		set interfaces ge-0/0/1 unit 0 family ethernet-switching interface-mode access
+ switchport mode access			set interfaces ge-0/0/1 unit 0 family ethernet-switching vlan members vlan10			
+ switchport access vlan 10		
+ 
+ 
+ 
+ 
