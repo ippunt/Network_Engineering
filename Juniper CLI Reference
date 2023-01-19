@@ -1,4 +1,4 @@
-configure
+configure;
 set interfaces ge-0/0/0 unit 0 family inet address 192.168.1.1/24
-commit
-
+commit; saves the configuration on NVRAM. commit and-quit; exits configuration mode. commit check; Only checks syntax
+show | comare; shows you the difference between current and previous configuration. 
