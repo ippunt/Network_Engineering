@@ -1,0 +1,9 @@
+
+Snooping:
+ip dhcp snooping; enabled on the device
+ip dhcp snooping vlan 2,3; enabled on vlans
+ip dhcp snooping trust; on interfaces that are towards the dhcp server.
+ip dhcp snooping information option allow-untrusted; On [L2SW1] Needed if you have    [DHCPS]0/1-----0/2[L2SW1]0/3------0/4[L2SW2]0/5-----Client
+    This is needed due to L2SW2 putting option 82 into the DHCP request. 
+
+https://packetpushers.net/ccnp-studies-configuring-dhcp-snooping/
