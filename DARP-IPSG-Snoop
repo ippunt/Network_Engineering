@@ -5,5 +5,6 @@ ip dhcp snooping vlan 2,3; enabled on vlans
 ip dhcp snooping trust; on interfaces that are towards the dhcp server.
 ip dhcp snooping information option allow-untrusted; On [L2SW1] Needed if you have    [DHCPS]0/1-----0/2[L2SW1]0/3------0/4[L2SW2]0/5-----Client
     This is needed due to L2SW2 putting option 82 into the DHCP request. 
+ip dhcp relay information trust-all; This is needed on [DHCPS] if it is a Cisco device it will need it due to option 82. 
 
 https://packetpushers.net/ccnp-studies-configuring-dhcp-snooping/
