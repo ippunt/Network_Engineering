@@ -1,5 +1,6 @@
 
 Snooping:
+Remember- Must be configured on every access switch participating in VLAN or get CHADDR. 
 ip dhcp snooping; enabled on the device
 ip dhcp snooping vlan 2,3; enabled on vlans
 ip dhcp snooping trust; on interfaces that are towards the dhcp server.
