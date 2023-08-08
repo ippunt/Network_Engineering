@@ -1,6 +1,6 @@
 
 Snooping:
-Remember- Must be configured on every access switch participating in VLAN or get CHADDR. 
+#Havent't prooved but have ran into issues. Remember- Must be configured on every access switch participating in VLAN or get CHADDR. 
 ip dhcp snooping; enabled on the device
 ip dhcp snooping vlan 2,3; enabled on vlans
 ip dhcp snooping trust; on interfaces that are towards the dhcp server.
@@ -11,9 +11,7 @@ ip dhcp relay information trust-all; This is needed on [DHCPS] if it is a Cisco 
 https://packetpushers.net/ccnp-studies-configuring-dhcp-snooping/
 
 
-
+Not 100% sure yet. 
 You may run into chaddr error
-
 If your access switch is not running dhcp snooping buy disto is. The circuit ID and additional information will not be provided and multiple devices will be seen requesting from the same interface.
-
 [DHCPS-Distro-Switch-Snooping] ----[Access-Switch] - Access switch need snooping. 
