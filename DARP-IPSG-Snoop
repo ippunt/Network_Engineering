@@ -8,7 +8,7 @@ ip dhcp snooping information option allow-untrusted; On [L2SW1] Needed if you ha
 ip dhcp relay information trust-all; This is needed on [DHCPS] if it is a Cisco device it will need it due to option 82. 
 
 https://packetpushers.net/ccnp-studies-configuring-dhcp-snooping/
-
+Not sure what caused the issue got change addr issues. But have validated that   [Distro-DHCPS]----[SW1_NO-SNooping]-CLi1/Cli2.   No DHCP snooping on access may be fine. 
 #Havent't prooved but have ran into issues. Remember- Must be configured on every access switch participating in VLAN or get CHADDR. 
 Not 100% sure yet. 
 You may run into chaddr error
