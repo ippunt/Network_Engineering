@@ -8,3 +8,11 @@ ip dhcp snooping information option allow-untrusted; On [L2SW1] Needed if you ha
 ip dhcp relay information trust-all; This is needed on [DHCPS] if it is a Cisco device it will need it due to option 82. 
 
 https://packetpushers.net/ccnp-studies-configuring-dhcp-snooping/
+
+
+
+You may run into chaddr error
+
+If your access switch is not running dhcp snooping buy disto is. The circuit ID and additional information will not be provided and multiple devices will be seen requesting from the same interface.
+
+[DHCPS-Distro-Switch-Snooping] ----[Access-Switch] - Access switch need snooping. 
