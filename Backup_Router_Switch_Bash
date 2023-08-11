@@ -1,0 +1,15 @@
+read  -p "What is your username:" uname
+read -s -p "What is your password:" pword
+
+list=$(cat fileip)
+today=$(date "+%Y-%m-%d")
+for x in $list; do
+echo $x;
+cat commands | sshpass -p "$pword" ssh -t -oStrictHostKeyChecking=no "$uname@$x" >> $x+$today.txt
+done
+
+
+
+cat commands
+terminal length 0
+show run
